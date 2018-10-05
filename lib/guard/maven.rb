@@ -117,7 +117,7 @@ module Guard
     def run_maven(options={})
       puts # start with a newline to get past prompt.
 
-      cmds = ['mvn']
+      cmds = @options[:cmd] || ['mvn']
 
       if options[:compile]
         cmds << 'compile'
